@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Ambulance,
@@ -61,26 +62,54 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-surface-muted">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-4xl lg:text-5xl font-bold mb-6"
           >
-            Built for <span className="text-brand-lime">Your Needs</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+              Built for <span className="text-brand-lime">Your Needs.</span>
+            </h2>
+            <p className="text-xl text-text-muted mb-8 leading-relaxed max-w-xl">
+              We provide more than just a ride. We offer specialized, caring
+              transportation tailored to the unique needs of every individual we
+              serve. From standard medical visits to complex community-based
+              waiver programs.
+            </p>
+            <div className="flex gap-4">
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-brand-primary">
+                  100%
+                </span>
+                <span className="text-sm text-text-muted uppercase tracking-wider">
+                  Compassionate
+                </span>
+              </div>
+              <div className="w-px h-12 bg-border mx-4" />
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-brand-lime">24/7</span>
+                <span className="text-sm text-text-muted uppercase tracking-wider">
+                  Reliable
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-text-muted"
+            className="rounded-[40px] overflow-hidden shadow-2xl border-4 border-white"
           >
-            We provide more than just a ride. We offer specialized, caring
-            transportation tailored to the unique needs of every individual we
-            serve.
-          </motion.p>
+            <Image
+              src="/services.jpg"
+              alt="Future Transportation at Health Center"
+              width={800}
+              height={500}
+              className="object-cover"
+            />
+          </motion.div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
