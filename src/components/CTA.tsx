@@ -6,62 +6,77 @@ import { CalendarPlus, UserPlus, ArrowRight } from "@phosphor-icons/react";
 
 export default function CTA() {
   return (
-    <section id="referral" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-primary/5 -z-10 rounded-l-[200px] hidden lg:block" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-lime/10 rounded-full blur-3xl -z-10" />
+    <section id="referral" className="py-24 bg-[#FAFAF8] relative overflow-hidden">
+      {/* Subtle Background Decorations */}
+      <div className="absolute top-0 right-0 w-[40%] h-full bg-brand-primary/5 -z-0 rounded-l-[160px] hidden lg:block" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-lime/5 rounded-full blur-3xl -z-0" />
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-stretch relative z-10">
         {/* Referral Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-brand-primary text-white p-12 rounded-[48px] shadow-2xl relative overflow-hidden flex flex-col items-center text-center group"
+          className="bg-[#1A3C34] text-white p-10 md:p-14 rounded-[48px] shadow-sm flex flex-col items-start relative overflow-hidden group border border-white/10"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[100px] -z-0 transition-all group-hover:scale-110" />
-          <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mb-8 relative z-10 transition-transform group-hover:rotate-12">
-            <CalendarPlus weight="duotone" size={48} />
+          {/* Subtle decoration */}
+          <div className="absolute top-0 right-0 w-48 h-48 bg-white/[0.03] rounded-bl-full pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+          
+          <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:bg-white/15">
+            <CalendarPlus weight="duotone" size={36} className="text-brand-lime" />
           </div>
-          <h3 className="text-3xl font-bold mb-6 relative z-10">
-            Make a Referral
+          
+          <h3 className="text-4xl lg:text-5xl font-black mb-6 leading-tight max-w-[12ch]">
+            Make a <span className="text-brand-lime">Referral</span>
           </h3>
-          <p className="text-white/70 mb-10 text-lg leading-relaxed relative z-10">
+          
+          <p className="text-white/70 mb-12 text-lg leading-relaxed max-w-md font-medium">
             Send us your client information to start the coordination process
             and secure reliable transportation today.
           </p>
-          <a
+          
+          <motion.a
             href="mailto:futrans25@gmail.com?subject=Referral Request"
-            className="flex items-center justify-center gap-2 bg-white text-brand-primary px-10 py-5 rounded-2xl font-bold text-xl hover:bg-brand-lime hover:text-white transition-all hover:scale-105 active:scale-95 shadow-xl w-full"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex items-center justify-center gap-3 bg-white text-[#1A3C34] px-10 py-5 rounded-2xl font-bold text-lg transition-colors hover:bg-brand-lime hover:text-white mt-auto w-full md:w-auto"
           >
-            Start Referral <ArrowRight weight="bold" size={24} />
-          </a>
+            Start Referral <ArrowRight weight="bold" size={20} />
+          </motion.a>
         </motion.div>
 
         {/* Career/Contact Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="bg-brand-lime text-white p-12 rounded-[48px] shadow-2xl relative overflow-hidden flex flex-col items-center text-center group"
+          transition={{ delay: 0.1 }}
+          className="bg-[#65A30D] text-white p-10 md:p-14 rounded-[48px] shadow-sm flex flex-col items-start relative overflow-hidden group border border-white/10"
         >
-          <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-br-[100px] -z-0 transition-all group-hover:scale-110" />
-          <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mb-8 relative z-10 transition-transform group-hover:-rotate-12">
-            <UserPlus weight="duotone" size={48} />
+          {/* Subtle decoration */}
+          <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/[0.05] rounded-tl-full pointer-events-none transition-transform duration-700 group-hover:scale-110" />
+          
+          <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10 transition-transform duration-500 group-hover:bg-white/15">
+            <UserPlus weight="duotone" size={36} />
           </div>
-          <h3 className="text-3xl font-bold mb-6 relative z-10">
-            Join Our Team
+          
+          <h3 className="text-4xl lg:text-5xl font-black mb-6 leading-tight max-w-[12ch]">
+            Join Our <span className="text-[#1A3C34]">Team</span>
           </h3>
-          <p className="text-white/70 mb-10 text-lg leading-relaxed relative z-10">
+          
+          <p className="text-white/85 mb-12 text-lg leading-relaxed max-w-md font-medium">
             Drive with purpose. Help individuals in your community stay
             connected and independent. Make a difference every day.
           </p>
-          <a
+          
+          <motion.a
             href="mailto:futrans25@gmail.com?subject=Job Application"
-            className="flex items-center justify-center gap-2 bg-white text-brand-lime px-10 py-5 rounded-2xl font-bold text-xl hover:bg-brand-primary hover:text-white transition-all hover:scale-105 active:scale-95 shadow-xl w-full"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex items-center justify-center gap-3 bg-[#1A3C34] text-white px-10 py-5 rounded-2xl font-bold text-lg transition-colors hover:bg-white hover:text-[#1A3C34] mt-auto w-full md:w-auto"
           >
-            Apply Now <ArrowRight weight="bold" size={24} />
-          </a>
+            Apply Now <ArrowRight weight="bold" size={20} />
+          </motion.a>
         </motion.div>
       </div>
     </section>

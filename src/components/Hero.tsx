@@ -80,8 +80,8 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="relative"
         >
@@ -98,8 +98,9 @@ export default function Hero() {
 
           {/* Floating Stats */}
           <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block border border-border"
           >
             <div className="flex items-center gap-4">
@@ -116,13 +117,9 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.5,
-            }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="absolute -bottom-6 -left-6 bg-brand-primary p-6 rounded-2xl shadow-xl z-20 hidden sm:block text-white"
           >
             <div className="flex items-center gap-4">

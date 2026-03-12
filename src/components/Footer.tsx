@@ -35,20 +35,6 @@ export default function Footer() {
               We strengthen independence and support daily living through
               reliable, professional, and on-time medical transportation.
             </p>
-            <div className="flex gap-4">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors cursor-pointer group"
-                >
-                  <ShareNetwork
-                    weight="duotone"
-                    size={20}
-                    className="group-hover:rotate-12 transition-transform"
-                  />
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
