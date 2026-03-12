@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
 };
 
+import RootNavbar from "@/components/Navbar";
+import ScrollToTop from "@/components/ScrollToTop";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,8 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${outfit.variable} font-sans antialiased`}>
+      <body className={`${outfit.variable} font-sans antialiased text-foreground selection:bg-brand-lime/30`}>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );
