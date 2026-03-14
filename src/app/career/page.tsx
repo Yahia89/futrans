@@ -125,20 +125,30 @@ export default function CareerPage() {
                       Please review these policies before applying:
                     </p>
                     <div className="flex flex-wrap gap-4">
-                      <button className="flex items-center gap-3 bg-brand-primary text-white border border-transparent px-8 py-4 rounded-2xl text-base font-bold hover:bg-brand-primary-hover transition-all group">
+                      <a 
+                        href="https://futuretransportion.pages.dev/Driver%20Policy.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 bg-brand-primary text-white border border-transparent px-8 py-4 rounded-2xl text-base font-bold hover:bg-brand-primary-hover transition-all group"
+                      >
                         Driver Policy
                         <ArrowRight
                           size={18}
                           className="group-hover:translate-x-1 transition-transform"
                         />
-                      </button>
-                      <button className="flex items-center gap-3 bg-[#FAFAF8] border border-border px-8 py-4 rounded-2xl text-base font-bold hover:border-brand-lime transition-all group">
+                      </a>
+                      <a 
+                        href="https://futuretransportion.pages.dev/Office%20Staff%20Policy.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 bg-[#FAFAF8] border border-border px-8 py-4 rounded-2xl text-base font-bold hover:border-brand-lime transition-all group"
+                      >
                         Office Staff Policy
                         <ArrowRight
                           size={18}
                           className="group-hover:translate-x-1 transition-transform"
                         />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -154,8 +164,8 @@ export default function CareerPage() {
                           className="text-brand-lime"
                         />
                       </div>
-                      <a href="mailto:futrans25@gmail.com">
-                        futrans25@gmail.com
+                      <a href="mailto:info@futrans.us">
+                        info@futrans.us
                       </a>
                     </div>
                     <div className="flex items-center gap-4 text-xl font-bold text-foreground hover:text-brand-lime transition-colors group cursor-pointer">

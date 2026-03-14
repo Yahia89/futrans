@@ -94,7 +94,7 @@ const privacySections = [
     icon: Envelope,
     content: "If you have questions about this Privacy Policy or how your information is handled, please reach out to our team:",
     contactItems: [
-      { icon: Envelope, label: "Email", value: "futrans25@gmail.com", href: "mailto:futrans25@gmail.com" },
+      { icon: Envelope, label: "Email", value: "info@futrans.us", href: "mailto:info@futrans.us" },
       { icon: Phone, label: "Phone", value: "612-888-9966", href: "tel:6128889966" },
       { icon: MapPin, label: "Address", value: "151 Silver Lake Rd NW, Unit #5, St Paul, MN 55112" }
     ]

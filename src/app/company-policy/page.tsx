@@ -16,7 +16,8 @@ import {
   Warning, 
   Bell,
   CheckCircle,
-  XCircle
+  XCircle,
+  FilePdf
 } from "@phosphor-icons/react";
 
 const policies = [
@@ -219,6 +220,46 @@ export default function CompanyPolicyPage() {
               </motion.div>
             ))}
           </div>
+
+          {/* Additional Documents Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-24 p-8 lg:p-12 bg-brand-primary rounded-[32px] text-white relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-lime/10 rounded-full blur-3xl -mr-32 -mt-32" />
+            <div className="relative z-10">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                <div>
+                  <h2 className="text-3xl font-black mb-4">Official Documents</h2>
+                  <p className="text-white/70 text-lg font-medium max-w-xl">
+                    Access our official policy documents in PDF format for your records and reference.
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://futuretransportion.pages.dev/Driver%20Policy.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-4 rounded-2xl transition-all border border-white/10 group"
+                  >
+                    <FilePdf weight="duotone" size={28} className="text-brand-lime group-hover:scale-110 transition-transform" />
+                    <span className="font-bold">Drivers Policy</span>
+                  </a>
+                  <a
+                    href="https://futuretransportion.pages.dev/Office%20Staff%20Policy.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-6 py-4 rounded-2xl transition-all border border-white/10 group"
+                  >
+                    <FilePdf weight="duotone" size={28} className="text-brand-lime group-hover:scale-110 transition-transform" />
+                    <span className="font-bold">Office Staff Policy</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -226,4 +267,3 @@ export default function CompanyPolicyPage() {
     </main>
   );
 }
-

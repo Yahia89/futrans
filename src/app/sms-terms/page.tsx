@@ -60,7 +60,7 @@ const smsSections = [
     icon: Lifebuoy,
     content: "For assistance, reply: HELP",
     contactItems: [
-      { icon: Envelope, label: "Email", value: "futrans25@gmail.com", href: "mailto:futrans25@gmail.com" },
+      { icon: Envelope, label: "Email", value: "info@futrans.us", href: "mailto:info@futrans.us" },
       { icon: Phone, label: "Phone", value: "612-888-9966", href: "tel:6128889966" },
       { icon: MapPin, label: "Address", value: "151 Silver Lake Rd NW, Unit #5, St Paul, MN 55112" }
     ]

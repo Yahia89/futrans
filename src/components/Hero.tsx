@@ -11,6 +11,29 @@ export default function Hero() {
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-lime/5 -z-10 rounded-l-[100px] hidden lg:block" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl -z-10" />
+      
+      {/* Premium Halftone Effect */}
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        <motion.div 
+          animate={{ 
+            x: [0, -32, 0],
+            y: [0, -32, 0]
+          }}
+          transition={{ 
+            duration: 30, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
+          className="absolute -inset-[100%] opacity-[0.12]"
+          style={{
+            backgroundImage: `radial-gradient(var(--lime) 1.5px, transparent 1.5px)`,
+            backgroundSize: '32px 32px',
+            transform: 'rotate(-15deg)',
+            maskImage: 'radial-gradient(circle at center, black, transparent 70%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, black, transparent 70%)'
+          }}
+        />
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 items-center">
         <motion.div

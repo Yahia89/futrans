@@ -113,8 +113,8 @@ export default function Footer() {
                   size={28}
                   className="shrink-0 text-brand-lime transition-transform group-hover:scale-110"
                 />
-                <a href="mailto:futrans25@gmail.com" className="break-all">
-                  futrans25@gmail.com
+                <a href="mailto:info@futrans.us" className="break-all">
+                  info@futrans.us
                 </a>
               </div>
               <a
@@ -141,6 +141,22 @@ export default function Footer() {
             <Link href="/company-policy" className="hover:text-white transition-colors">
               Company Policy
             </Link>
+            <a 
+              href="https://futuretransportion.pages.dev/Driver%20Policy.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Drivers Policy
+            </a>
+            <a 
+              href="https://futuretransportion.pages.dev/Office%20Staff%20Policy.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              Office Staff Policy
+            </a>
           </div>
         </div>
       </div>
