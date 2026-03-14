@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck, Heart, Sparkle } from "@phosphor-icons/react";
@@ -46,7 +46,7 @@ export default function Mission() {
               />
             </div>
             {/* Stats Overlay */}
-            <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-xl border border-border max-w-[240px]">
+            <div className="absolute -bottom-10 -right-10 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px] z-20">
               <p className="text-4xl font-bold text-brand-lime mb-1">7+</p>
               <p className="text-sm font-semibold text-foreground leading-tight">
                 Counties Served in Minnesota

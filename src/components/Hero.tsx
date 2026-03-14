@@ -40,7 +40,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#referral"
+              href="/referral"
               className="flex items-center justify-center gap-2 bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-primary-pressed transition-all hover:shadow-xl hover:scale-105 active:scale-95 group"
             >
               Make a Referral
@@ -61,19 +61,24 @@ export default function Hero() {
 
           <div className="mt-12 flex items-center gap-6 border-t border-border pt-8">
             <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
+              {[
+                { bg: "bg-blue-100", text: "text-blue-600", label: "JD" },
+                { bg: "bg-indigo-100", text: "text-indigo-600", label: "AS" },
+                { bg: "bg-purple-100", text: "text-purple-600", label: "MK" },
+                { bg: "bg-brand-lime/20", text: "text-brand-lime", label: "RB" },
+              ].map((user, i) => (
                 <div
                   key={i}
                   className="w-10 h-10 rounded-full border-2 border-white bg-surface-muted flex items-center justify-center overflow-hidden"
                 >
-                  <div className="w-full h-full bg-brand-lime/20 flex items-center justify-center text-brand-lime font-bold text-xs uppercase">
-                    U{i}
+                  <div className={`w-full h-full ${user.bg} flex items-center justify-center ${user.text} font-bold text-xs uppercase`}>
+                    {user.label}
                   </div>
                 </div>
               ))}
             </div>
             <p className="text-sm text-text-muted">
-              Trusted by <span className="font-bold text-foreground">500+</span>{" "}
+              Trusted by <span className="font-bold text-foreground">MANY</span>{" "}
               individuals in the metro area
             </p>
           </div>
@@ -101,7 +106,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block border border-border"
+            className="absolute -top-10 -right-10 bg-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block border border-border"
           >
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-brand-lime/10 rounded-full flex items-center justify-center text-brand-lime">
@@ -120,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute -bottom-6 -left-6 bg-brand-primary p-6 rounded-2xl shadow-xl z-20 hidden sm:block text-white"
+            className="absolute -bottom-10 -left-10 bg-brand-primary p-6 rounded-2xl shadow-xl z-20 hidden sm:block text-white"
           >
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">

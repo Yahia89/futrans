@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 
@@ -46,10 +47,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/logo.png",
-        width: 800,
-        height: 600,
-        alt: "Future Transportation Logo",
+        url: "/mission.png",
+        width: 1200,
+        height: 630,
+        alt: "Future Transportation Service",
       },
     ],
   },
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Future Transportation",
     description: "Reliable NEMT & Waiver Services in Minnesota",
-    images: ["/logo.png"],
+    images: ["/mission.png"],
   },
   robots: {
     index: true,
@@ -76,7 +77,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Future Transportation",
-  image: "https://futrans.us/logo.png",
+  image: "https://futrans.us/mission.png",
   "@id": "https://futrans.us",
   url: "https://futrans.us",
   telephone: "6128889966",
@@ -125,6 +126,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "vvi82nuf4k");
+          `}
+        </Script>
         {children}
         <ScrollToTop />
       </body>
