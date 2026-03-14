@@ -81,7 +81,7 @@ export default function Mission() {
                     <item.icon weight="duotone" size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg">{item.title}</h4>
+                    <h3 className="font-bold text-lg">{item.title}</h3>
                     <p className="text-text-muted">{item.desc}</p>
                   </div>
                 </div>

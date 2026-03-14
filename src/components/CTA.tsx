@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { CalendarPlus, UserPlus, ArrowRight } from "@phosphor-icons/react";
+
+const MotionLink = motion(Link);
 
 export default function CTA() {
   return (
@@ -35,14 +37,14 @@ export default function CTA() {
             and secure reliable transportation today.
           </p>
           
-          <motion.a
-            href="mailto:futrans25@gmail.com?subject=Referral Request"
+          <MotionLink
+            href="/referral"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="flex items-center justify-center gap-3 bg-white text-[#1A3C34] px-10 py-5 rounded-2xl font-bold text-lg transition-colors hover:bg-brand-lime hover:text-white mt-auto w-full md:w-auto"
           >
             Start Referral <ArrowRight weight="bold" size={20} />
-          </motion.a>
+          </MotionLink>
         </motion.div>
 
         {/* Career/Contact Card */}
@@ -69,16 +71,17 @@ export default function CTA() {
             connected and independent. Make a difference every day.
           </p>
           
-          <motion.a
-            href="mailto:futrans25@gmail.com?subject=Job Application"
+          <MotionLink
+            href="/career"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="flex items-center justify-center gap-3 bg-[#1A3C34] text-white px-10 py-5 rounded-2xl font-bold text-lg transition-colors hover:bg-white hover:text-[#1A3C34] mt-auto w-full md:w-auto"
           >
             Apply Now <ArrowRight weight="bold" size={20} />
-          </motion.a>
+          </MotionLink>
         </motion.div>
       </div>
     </section>
+
   );
 }

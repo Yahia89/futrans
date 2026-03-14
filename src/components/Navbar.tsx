@@ -31,10 +31,11 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/#services" },
+    { name: "Referral", href: "/referral" },
+    { name: "Career", href: "/career" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -50,8 +51,14 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group relative z-[110]">
-            <div className="w-10 h-10 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
-              F
+            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-border/10 group-hover:scale-105 transition-transform bg-white">
+              <Image
+                src="/logo.png"
+                alt="Future Transportation Logo"
+                fill
+                className="object-contain p-1"
+                priority
+              />
             </div>
             <span className="font-bold text-xl tracking-tight text-[#1A1C1E] uppercase">
               Future <span className="text-brand-lime">Transportation</span>
