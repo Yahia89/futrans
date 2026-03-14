@@ -29,9 +29,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "96x96" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
   openGraph: {
     title: "Future Transportation | Reliable NEMT & Waiver Services",
